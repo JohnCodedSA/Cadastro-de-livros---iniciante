@@ -1,6 +1,6 @@
 //  ====================================================================================
-//  Objetivo: Implementar o cadastro e a listagem de livros usando um array est·tico.
-//  Foco em structs, entrada/saÌda de dados e organizaÁ„o b·sica.
+//  Objetivo: Implementar o cadastro e a listagem de livros usando um array est√°tico.
+//  Foco em structs, entrada/sa√≠da de dados e organiza√ß√£o b√°sica.
 //  ====================================================================================
 
 #include <stdio.h>
@@ -18,13 +18,13 @@ struct Livro{
     int edicao;
 };
 
-//  --- FunÁ„o para limpar o buffer de entrada
+//  --- Fun√ß√£o para limpar o buffer de entrada
 void LimparBufferEntrada(){
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
-//  --- FunÁ„o principal do menu
+//  --- Fun√ß√£o principal do menu
 int main(){
     setlocale(LC_ALL,"");
     
@@ -33,7 +33,7 @@ int main(){
     int totalLivros = 0;
     int opcao;
 
-    //  --- LaÁo principal do menu
+    //  --- La√ßo principal do menu
     do{
 
         printf("====================================\n");
@@ -43,9 +43,9 @@ int main(){
         printf("2 - Listar todos os livros\n");
         printf("0 - Sair\n");
         printf("------------------------------------\n");
-        printf("Escolha uma opÁ„o: ");
+        printf("Escolha uma op√ß√£o: ");
     
-        // LÍ a opÁ„o do usu·rio
+        // L√™ a op√ß√£o do usu√°rio
         scanf("%d", &opcao);
         LimparBufferEntrada();
 
@@ -70,7 +70,7 @@ int main(){
                     biblioteca[totalLivros].autor[strcspn(biblioteca[totalLivros].autor, "\n")] = '\0';
                     biblioteca[totalLivros].editora[strcspn(biblioteca[totalLivros].editora, "\n")] = '\0';
 
-                    printf("Digite a ediÁ„o: ");
+                    printf("Digite a edi√ß√£o: ");
                     scanf("%d", &biblioteca[totalLivros].edicao);
                     LimparBufferEntrada();
 
@@ -79,7 +79,7 @@ int main(){
                     printf("\nLivro cadastrado com sucesso!\n");
 
                 } else {
-                    printf("Biblioteca cheia! N„o È possÌvel cadastrar mais livros.\n");
+                    printf("Biblioteca cheia! N√£o √© poss√≠vel cadastrar mais livros.\n");
                 }
 
                 printf("\nPressione Enter para continuar...");
@@ -100,7 +100,7 @@ int main(){
                         printf("Nome: %s\n", biblioteca[i].nome);
                         printf("Autor: %s\n", biblioteca[i].autor);
                         printf("Editora: %s\n", biblioteca[i].editora);
-                        printf("EdiÁ„o: %d\n", biblioteca[i].edicao);
+                        printf("Edi√ß√£o: %d\n", biblioteca[i].edicao);
                     }
                     printf("------------------------------------\n");
                 }
@@ -115,7 +115,7 @@ int main(){
                 break;
 
             default:
-                printf("\nOpÁ„o inv·lida! Tente novamente.\n");
+                printf("\nOp√ß√£o inv√°lida! Tente novamente.\n");
                 printf("\nPressione Enter para continuar...");
                 getchar();
                 break;
